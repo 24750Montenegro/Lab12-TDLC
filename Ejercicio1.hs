@@ -3,11 +3,14 @@ import Data.List (intercalate, nub, sortBy)
 import System.IO (hFlush, stdout)
 import Text.Read (readMaybe)
 
+-- Un valor del diccionario puede ser texto o numero
 data Valor = Texto String | Numero Int
   deriving (Eq, Ord)
 
+-- Diccionario como lista de pares (key, valor)
 type Dict = [(String, Valor)]
 
+-- Ordena comparando el valor del key en cada diccionario
 ordenarPor :: String -> [Dict] -> [Dict]
 ordenarPor key = sortBy (\a b -> compare (lookup key a) (lookup key b))
 
@@ -29,9 +32,11 @@ telefonos =
   , [("make", Texto "Samsung"), ("model", Numero 7),   ("color", Texto "Blue")]
   ]
 
+-- Keys unicos presentes en los datos
 keys :: [String]
 keys = nub (concatMap (\dict -> map fst dict) telefonos)
 
+-- Muestra el menu y repite hasta recibir una opcion valida
 pedirKey :: IO String
 pedirKey = do
   putStrLn "Keys disponibles:"

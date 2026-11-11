@@ -1,9 +1,11 @@
 -- Ejercicio 4: eliminar de una lista los elementos indicados usando lambdas
 import Data.List (intercalate)
 
+-- Conserva solo los elementos que no estan en la lista a borrar
 eliminar :: [String] -> [String] -> [String]
 eliminar borrar = filter (\x -> x `notElem` borrar)
 
+-- Imprime la lista con el formato de Python
 mostrarLista :: [String] -> String
 mostrarLista xs = "[" ++ intercalate ", " (map (\s -> "'" ++ s ++ "'") xs) ++ "]"
 

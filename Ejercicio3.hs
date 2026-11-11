@@ -1,6 +1,7 @@
 -- Ejercicio 3: matriz transpuesta usando lambdas
 import Data.List (intercalate)
 
+-- La fila j de la transpuesta es el elemento j de cada fila original
 transpuesta :: [[Int]] -> [[Int]]
 transpuesta [] = []
 transpuesta m@(primera:_) = map (\j -> map (\fila -> fila !! j) m) [0 .. length primera - 1]
@@ -8,6 +9,7 @@ transpuesta m@(primera:_) = map (\j -> map (\fila -> fila !! j) m) [0 .. length 
 mostrarFila :: [Int] -> String
 mostrarFila xs = "[" ++ intercalate ", " (map show xs) ++ "]"
 
+-- Imprime la matriz con las filas alineadas
 mostrarMatriz :: String -> [[Int]] -> String
 mostrarMatriz nombre m = nombre ++ " = [" ++ intercalate (",\n" ++ replicate (length nombre + 4) ' ') (map mostrarFila m) ++ "]"
 

@@ -3,12 +3,14 @@ import Data.List (intercalate)
 import System.IO (hFlush, stdout)
 import Text.Read (readMaybe)
 
+-- Eleva cada elemento de la lista a la n
 potencias :: Int -> [Integer] -> [Integer]
 potencias n = map (\x -> x ^ n)
 
 mostrarLista :: [Integer] -> String
 mostrarLista xs = "[" ++ intercalate ", " (map show xs) ++ "]"
 
+-- Pide n hasta que sea un entero positivo
 pedirN :: IO Int
 pedirN = do
   putStr "Ingrese la potencia n (entero positivo): "
