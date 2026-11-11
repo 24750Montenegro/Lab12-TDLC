@@ -48,20 +48,18 @@ Muestra la lista original y un menú con los keys disponibles. Se escribe el nú
 
 ### Ejercicio 2 - Potencia n-ésima
 
-Pide la potencia `n` (entero positivo) y la aplica a cada elemento de la lista.
+Inicia con la lista del ejemplo `[1, ..., 10]`. Desde el menú se pueden agregar o eliminar números y calcular la potencia `n` (entero positivo) de cada elemento.
 
 ![Ejecución del ejercicio 2](capturas/ejercicio2.png)
 
-Para usar otra lista, modificar `lista` en el archivo, por ejemplo `lista = [1, 3, 2]`.
-
 ### Ejercicio 3 - Matriz transpuesta
+
+Inicia con la matriz del ejemplo. Desde el menú se pueden agregar filas (números separados por espacio o coma, con la misma cantidad de columnas), eliminar filas y calcular la transpuesta.
 
 ![Ejecución del ejercicio 3](capturas/ejercicio3.png)
 
-Para usar otra matriz, modificar `x` en el archivo.
-
 ### Ejercicio 4 - Eliminar elementos
 
-![Ejecución del ejercicio 4](capturas/ejercicio4.png)
+Inicia con las listas del ejemplo. Desde el menú se pueden agregar o quitar elementos de la lista inicial y de la lista de elementos a borrar, y calcular el resultado.
 
-Para usar otras listas, modificar `colores` y `aBorrar` en el archivo.
+![Ejecución del ejercicio 4](capturas/ejercicio4.png)
