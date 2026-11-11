@@ -1,6 +1,7 @@
 -- Ejercicio 1: ordenar una lista de diccionarios por un key usando lambdas
-import Data.List (intercalate, sortBy)
-import System.Environment (getArgs)
+import Data.List (intercalate, nub, sortBy)
+import System.IO (hFlush, stdout)
+import Text.Read (readMaybe)
 
 data Valor = Texto String | Numero Int
   deriving (Eq, Ord)
@@ -28,13 +29,27 @@ telefonos =
   , [("make", Texto "Samsung"), ("model", Numero 7),   ("color", Texto "Blue")]
   ]
 
+keys :: [String]
+keys = nub (concatMap (\dict -> map fst dict) telefonos)
+
+pedirKey :: IO String
+pedirKey = do
+  putStrLn "Keys disponibles:"
+  mapM_ (\(i, k) -> putStrLn ("  " ++ show i ++ ") " ++ k)) (zip [1 :: Int ..] keys)
+  putStr "Seleccione el key para ordenar: "
+  hFlush stdout
+  entrada <- getLine
+  case readMaybe entrada of
+    Just n | n >= 1 && n <= length keys -> return (keys !! (n - 1))
+    _ -> do
+      putStrLn "Opcion invalida, intente de nuevo.\n"
+      pedirKey
+
 main :: IO ()
 main = do
-  args <- getArgs
-  let key = case args of
-        (k:_) -> k
-        []    -> "model"
   putStrLn "Original:"
   putStrLn (mostrarLista telefonos)
+  putStrLn ""
+  key <- pedirKey
   putStrLn ("\nOrdenado por '" ++ key ++ "':")
   putStrLn (mostrarLista (ordenarPor key telefonos))
