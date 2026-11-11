@@ -2,12 +2,9 @@
 
 Solución de los cuatro ejercicios del laboratorio en **Haskell**, usando funciones lambda.
 
-| Archivo | Ejercicio |
-|---|---|
-| `Ejercicio1.hs` | Ordenar una lista de diccionarios por un key seleccionado |
-| `Ejercicio2.hs` | Potencia n-ésima de cada elemento de una lista |
-| `Ejercicio3.hs` | Matriz transpuesta |
-| `Ejercicio4.hs` | Eliminar de una lista los elementos indicados |
+## Video de demostración
+
+[Ver video](ENLACE_DEL_VIDEO)
 
 ## Requisitos
 
@@ -47,53 +44,24 @@ ghc Ejercicio1.hs
 
 Muestra la lista original y un menú con los keys disponibles. Se escribe el número del key por el cual ordenar.
 
-```
-Keys disponibles:
-  1) make
-  2) model
-  3) color
-Seleccione el key para ordenar: 2
-
-Ordenado por 'model':
-D = [{'make': 'Apple', 'model': 2, 'color': 'Silver'},
-     {'make': 'Samsung', 'model': 7, 'color': 'Blue'},
-     {'make': 'Huawei', 'model': 50, 'color': 'Gold'},
-     {'make': 'Nokia', 'model': 216, 'color': 'Black'}]
-```
+![Ejecución del ejercicio 1](capturas/ejercicio1.png)
 
 ### Ejercicio 2 - Potencia n-ésima
 
 Pide la potencia `n` (entero positivo) y la aplica a cada elemento de la lista.
 
-```
-Lista inicial: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-Ingrese la potencia n (entero positivo): 3
-Potencia 3: [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
-```
+![Ejecución del ejercicio 2](capturas/ejercicio2.png)
 
 Para usar otra lista, modificar `lista` en el archivo, por ejemplo `lista = [1, 3, 2]`.
 
 ### Ejercicio 3 - Matriz transpuesta
 
-```
-X = [[1, 2, 3, 1],
-     [4, 5, 6, 0],
-     [7, 8, 9, -1]]
-
-Y = [[1, 4, 7],
-     [2, 5, 8],
-     [3, 6, 9],
-     [1, 0, -1]]
-```
+![Ejecución del ejercicio 3](capturas/ejercicio3.png)
 
 Para usar otra matriz, modificar `x` en el archivo.
 
 ### Ejercicio 4 - Eliminar elementos
 
-```
-Lista inicial:      ['rojo', 'verde', 'azul', 'amarillo', 'gris', 'blanco', 'negro']
-Elementos a borrar: ['amarillo', 'café', 'blanco']
-Resultado:          ['rojo', 'verde', 'azul', 'gris', 'negro']
-```
+![Ejecución del ejercicio 4](capturas/ejercicio4.png)
 
 Para usar otras listas, modificar `colores` y `aBorrar` en el archivo.
