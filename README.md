@@ -4,7 +4,7 @@ Solución de los cuatro ejercicios del laboratorio en **Haskell**, usando funcio
 
 ## Video de demostración
 
-[Ver video](ENLACE_DEL_VIDEO)
+[Ver video](https://youtu.be/pNzxBtErnlw)
 
 ## Requisitos
 
